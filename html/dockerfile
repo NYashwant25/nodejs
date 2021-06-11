@@ -1,0 +1,4 @@
+FROM openjdk:8
+EXPOSE 8080
+ADD target/Node-js2.git
+ENTRYPOINT [ "java","-jar","/Node-js2.git" ]
