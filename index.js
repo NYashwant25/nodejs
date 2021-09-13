@@ -31,6 +31,6 @@ app.set("view engine", "hbs")
 
 app.use("/course", CourseController);
 
-app.listen("8080", ()=>{
-    console.log("Server Running at localhost 8080");
+app.listen("3000", ()=>{
+    console.log("Server Running at localhost 3000");
 });

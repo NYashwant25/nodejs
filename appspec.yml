@@ -1,0 +1,18 @@
+version: 0.0  
+os: ubuntu
+files:
+  -source: /
+  destination: /home/ubuntu/app
+hooks:
+  ApplicationStop:
+    - location: script/application_stop.sh
+      timeout: 300
+      runas: ubuntu
+    BeforeInstall:
+      - location: scipt/before_install.sh
+        timeout: 300
+        runas: ubuntu
+  ApplicationStart:
+    - location: script/application_start.sh
+      timeout: 300
+      ruas: ubuntu
